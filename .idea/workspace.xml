@@ -39,4 +39,14 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="439" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584275412796">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="439" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1584275412796" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1584277269540">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1584277269540" />
+  </component>
 </project>
