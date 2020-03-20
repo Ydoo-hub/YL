@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>websocet</title>
+</head>
+<body>
+    <script>
+        let ws = new WebSocket('ws://localhost:2333');
+        ws.onopen =()=>{             //客户端发送数据
+            ws.send('来自客户端的数据')
+        }
+        ws.onmessage =(data)=>{      //客户端接收数据
+            console.log(data.data)
+        }
+    </script>
+</body>
+</html>
