@@ -168,3 +168,13 @@ console.log(s7 instanceof Child5,s7 instanceof Parent5);//true true
 console.log(s7.constructor); // Child5
 console.log(s8.constructor); // Parent5
 console.log(s8.__proto__.constructor.constructor); // Parent5
+
+// new 创建实例
+//第一步 创建一个对象  let obj ={}
+let obj = new Test();
+
+//第二步 将空对象的__proto__指向test()构造函数的实例
+obj.__proto__ = Test().prototype;
+
+//第三步 将Test的this 指向obj;
+Test.call(obj);
