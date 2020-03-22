@@ -15,3 +15,37 @@ let reg = /^(?:(http|https|ftp):\/\/)?((?:[\w-]+\.)+[a-z0-9]+)((?:\/[^/?#]*)+)?(
 //5.哈希值  #****
 
 console.log(reg.exec(str));
+
+
+console.log('----------------------------------------------------')
+//普通函数
+function foo() {
+
+    foo.a = function () {    //私有属性中有a了，下面调用的时候先看私有属性有没有，没有的话再去原型链上找
+        console.log(1)
+    };
+
+    this.a = function () {
+        console.log(2)
+    }
+}
+
+// =>把foo当作类，在foo的原型上加上 公有 属性方法，实例的时候可以调用 => .a();
+foo.prototype.a = function () {
+    console.log(3)
+};
+
+//把foo当作普通对象，设置私有属性方法 => foo.a();
+foo.a = function () {
+    console.log(4)
+};
+
+foo.a();   //4
+
+let obj = new foo();  //创建实例之后，foo.a = 1 (覆盖了对象4那个属性)  this.a =2 ;obj调用foo ，所以this指向obj
+obj.a();   //2   //这里是foo里面的 this.a  obj调用了 .a() 方法；
+foo.a();   //1    //创建实例之后，foo.a = 1 (覆盖了对象4那个属性)
+
+console.log('----------------------------------------------------')
+
+
