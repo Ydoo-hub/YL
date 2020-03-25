@@ -171,10 +171,62 @@ console.log(s8.__proto__.constructor.constructor); // Parent5
 
 // new 创建实例
 //第一步 创建一个对象  let obj ={}
-let obj = new Test();
+// let obj = new Test();
 
 //第二步 将空对象的__proto__指向test()构造函数的实例
-obj.__proto__ = Test().prototype;
+// obj.__proto__ = Test().prototype;
 
 //第三步 将Test的this 指向obj;
-Test.call(obj);
+// Test.call(obj);
+
+//class
+class MathHandle{
+    constructor(x,y) {
+        this.x=x;
+        this.y=y;
+    }
+    add(){
+        return this.x +this.y
+    }
+}
+const m = new MathHandle(1,2)
+console.log(m.add());
+
+
+//js 继承
+
+function Animal() {
+    this.eat = function () {
+        console.log('eat-eat')
+    }
+}
+function Dog() {
+    this.bark = function () {
+        console.log("dog back")
+    }
+}
+Dog.prototype = new Animal();
+//哈士奇
+var hashiqi = new Dog();
+
+//class 继承
+class Animal1 {
+    constructor(name) {
+        this.name = name
+    }
+    eat(){
+        console.log(`${this.name}eat`)
+    }
+}
+class Dog extends Animal1 {
+    constructor(name) {
+        super(name);
+        this.name = name
+    }
+    say(){
+        console.log(`${this.name}say`)
+    }
+}
+const dog = new Dog('哈士奇');
+dog.say();
+dog.eat();
