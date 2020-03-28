@@ -5,24 +5,49 @@
     <title>Title</title>
 </head>
 <body>
-
-
+    <ul>
+        <li>1</li>
+    </ul>
+    <ul id="sul">
+        <li>2</li>
+    </ul>
 <script type="text/javascript">
     alert(1)
-//问:什么是DOM
+//1.什么是DOM
+//文档对象模型，是 W3C组织推荐的处理可扩展标记语言（HTML或者XML）的标准编程接口
 
-//怎么获取页面元素
+
+//2.怎么获取页面元素
+document.getElementById() //通过id，返回的都是对象模型
+console.dir() //打印返回的元素对象 div#timer
+document.getElementsByTagName('li') //通过标签名，获取li，返回的都是对象的集合，以伪数组的形式存储的
+var a = document.getElementById('sul') //通过id，返回的都是对象模型
+a.getElementsByTagName('li') //通过标签名，获取li，返回的都是对象的集合，以伪数组的形式存储的
+    //下面为H5才有的
+document.getElementsByClassName('leiming') //类名获取，带s因为类名被用多次，返回的都是对象的集合，以伪数组的形式存储的
+document.querySelector('.box')//返回指定选择器的第一个元素对象 有两个.box只能拿到第一个
+document.querySelectorAll('.box')//返回指定选择器的所有元素对象 有两个.box都能拿
+    //特殊元素
+    document.body //获取body
+    document.documentElement // 获取html ----!!!!!!!!
 
 
-//如何个元素注册事件
+//3.如何个元素注册事件
+    //点击事件
+    //1.事件源       事件类型         事件处理程序
+    //对应 按钮   类型（点击，双击等）    函数
+
 
 
 //如何操作DOM元素的属性
+    //
 
 //能够创建元素
 
 
 //如何操作DOM节点
+
+
 
 </script>
 </body>
