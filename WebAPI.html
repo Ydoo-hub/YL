@@ -40,7 +40,19 @@ document.querySelectorAll('.box')//返回指定选择器的所有元素对象 �
 
 
 //如何操作DOM元素的属性
-    //
+    //首先获取  获取完btn之后  btn.*****
+    btn.innerText =  '2020-3-28'//文本内容,不识别HTML标签
+                                // log的话，会默认除去空格和标签
+
+    btn.innerHTML = '<strong>2020-3-28</strong>'//文本内容,可以识别HTML标签  这个用的多
+                                                //  log的话，都会打印出来<a></a>等等标签
+    var img = document.getElementById('***')
+    img.src = '/////gi'
+
+
+
+
+
 
 //能够创建元素
 
