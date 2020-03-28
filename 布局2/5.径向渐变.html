@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>径向渐变</title>
+  <style>
+  	.box{
+  		width: 200px;
+  		height: 300px;
+  		border:1px solid red;
+  		margin: 100px auto;
+  		background:radial-gradient(closest-side circle at 20% 20%,blue,yellow,green,pink);
+  		/*background:radial-gradient(closest-side circle at 20% 20%,blue,yellow,green,pink);*/
+  		/*
+			第一个参数， 大小 形状 中心点
+						形状 为圆形 circle 椭圆形 默认
+						中心（默认是x:center y:center）
+						语法(at x y)
+						参考点，左上角原点为参考点
+						x,y可以是px 也可以是 百分比%
+						
+						大小
+						最近边 closest-side
+						最远边 farthest-side
+						最近角 closest-center
+						最远角 farthest-center
+						总体语法:closest-side circle at 20% 20%, ;
+				第一个参数可以全部省略
+			第二个参数:颜色+颜色+颜色.....; 
+  		*/
+  	}
+
+  </style>
+</head>
+
+<body>
+ 	<div class='box'>
+ 	</div>
+
+</body>
+
+
+<script type="text/javascript">
+</script>
+</html>

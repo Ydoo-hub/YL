@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>transform.2d</title>
+
+  <style>
+	/*
+		transform 2d 的属性使用函数来定义的 包含translate()、scale()
+					 rotate() 和 skew()
+		transform.2d: 函数名(x值，y值) ;
+		translate()方法: 根据(x轴)和顶部(y轴)位置给定的参数，从当前元素位置移动。接受
+						 css的标准量单位(px)
+						 translate(x,y)
+		rotate()方法:    根据给定的角度旋转，允许负责，元素将逆时针旋转，单位deg
+
+	*/
+	.box{
+		width: 200px;
+		height: 400px;
+		border:1px solid #ccc;
+		margin: 100px auto; 
+		transition: all 1s;
+	}
+	.box:hover{
+		/*margin-top:106px;*/
+/*		transform: translate(0px,-30px);
+*/		/*支持一个参数，第一个x轴，可以为负数，正右负左边
+		  第二个参数为y轴
+		*/
+		box-shadow: 0px 0px 5px 5px;
+
+		/*transform: rotate(-30deg);*/
+		/*只能支持一个参数，可以正可以负，正的顺时针，负的逆时针，单位deg*/
+		/*transform: scale(1.5);*/
+		/*可以支持两个参数，一个水平放大倍数，一个竖直的放大倍数，如果写一个的话就是整体放大*/
+		transform: skew(40deg)
+		/*支持两个值，也支持一个值
+		第一个值:水平，第二个:垂直
+		单位:deg*/
+
+	}
+
+  </style>
+</head>
+
+<body>
+ 	<div class="box">
+ 		<a>aaa</a>
+ 	</div>
+
+</body>
+
+
+<script type="text/javascript">
+</script>
+</html>

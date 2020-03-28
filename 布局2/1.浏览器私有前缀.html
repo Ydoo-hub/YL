@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>浏览器私有前缀</title>
+<!--（-moz- 火狐）（-webkit- 谷歌+safari）（-ms- IE） 
+      （-o- 欧朋）-->
+  <style>
+    a{
+      font-size: 100px;
+      -webkit-text-stroke:3px #f00;
+      color:transparent;
+      /*在开发中所有前缀先写最后再写标准的*/      
+/*      -o-text-stroke:3px; //欧鹏
+      -ms-text-stroke:3px; //IE*/
+/*      /*-webkit-*/text-stroke:3px; /*//谷歌*/
+*/      /*-moz-text-stroke:3px; //火狐*/
+      /*最后加上*/
+      text-stroke:3px;
+    }
+  </style>
+</head>
+
+<body>
+<a>啦啦啦</a>
+</body>
+
+
+<script type="text/javascript">
+
+
+  
+</script>
+</html>

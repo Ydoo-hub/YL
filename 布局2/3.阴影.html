@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>阴影</title>
+  <style>
+  	a{
+  		/*文字阴影*/
+  		font-size: 100px;
+  		text-align: center;
+  		text-shadow: -10px -1px 0px red;
+/*  		display: block;
+  		margin: 30px auto;*/
+  		/* 
+  		x正向右 y正向下
+  		第一个参数代表水平（正数代表水平向右，负数代表水平向左） 
+		第二个参数代表垂直（正数代表水平向上，负数代表水平向下）
+		第三个参数代表模糊度，不加模糊度显得很生硬
+		第四个参数为颜色
+		text-shadow: -10px -1px 0px red,1px 2px 0px blue;
+		可以设置多个阴影,逗号隔开就可以
+  		*/
+  	}
+  	.box{
+  		margin: 30px auto;
+  		width: 300px;
+  		height: 300px;
+  		background-color: #ccc;
+  		box-shadow: 3px 3px 3px 0px red;
+  		/*
+  			三个参数和上面一样
+  		*/
+  		/*box-shadow: 3px 3px 30px 10px red;*/
+  		/*
+  			四个参数是向四周扩散（四条边都有阴影）
+  		*/
+  		/*box-shadow:10px 10px inset red   */
+  		/*
+  			inset参数是设置内置阴影
+  			默认是外置的 outset
+  		*/
+  	}
+  	/* 可以利用圆角画圆，然后加上边框 */
+  	button{
+  		width: 100px;
+  		height: 40px;
+  		background-color: green;
+  		margin:40px auto;
+  		border-radius: 10px;
+  		box-shadow:10px 10px 6px black;
+  		line-height: 40px;
+  		text-align:center;
+  		color: #000;
+  		outline:none;
+  	}
+  	button:hover{
+  		box-shadow: 6px 6px 3px inset black;
+  	}
+
+  </style>
+</head>
+
+<body>
+	<a>study</a>
+ 	<div class="box"></div>
+ 	<button>登录</button>
+</body>
+
+
+<script type="text/javascript">
+</script>
+</html>
