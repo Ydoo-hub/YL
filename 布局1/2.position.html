@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML布局</title>
+  <link rel="shortcut icon" href="images/baidu3.png">
+  <style>
+    .dingw{
+      width:200px;
+      height:200px;
+      background-color: gray;
+      position: relative;
+      /*相对定位是相对于目前div的位置来移动
+      绝对定位是相对于外层父级元素来定位（前提是外层父级元素要有定位处理）
+      如果外层元素没有设置position的值的话，
+      就一层一层往外找，要是全部没有设置的话就拿到最外层body作为参考
+      决定定位后的位置还不受限制*/
+      top:30px;
+      left: 30px;
+    }
+    .dingw>div{
+      width: 50px;
+      height: 50px;
+    }
+    .box1{
+      background-color: red
+    }
+    .box2{
+      background-color: blue;
+      position: absolute;
+      left: 30px;
+      top:20px;
+    }
+    .box3{
+      background-color: green
+    }
+
+    /*以上为相对定位和绝对定位，对应下面注释div*/
+    .box4{
+      height: 2000px;
+      background: pink;
+    }
+    .box5{
+      width: 30px;
+      height: 100px;
+      position: fixed;
+      background-color: blue;
+      right:1%;
+      top:300px;
+
+    }
+  </style>
+</head>
+  
+<body>
+  <div class='dingw'>
+      <div class="box1">
+          1
+      </div>
+
+      <div class="box2">
+          2
+      </div>
+
+      <div class="box3">
+          3
+      </div>
+  </div>
+  1
+  <div class='box4'>
+    <div class = 'box5'>
+
+    </div>
+  </div>
+  2
+</body>
+
+
+<script type="text/javascript">
+
+
+  
+</script>
+</html>

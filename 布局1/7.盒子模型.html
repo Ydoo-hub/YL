@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>盒子模型</title>
+  <style type="text/css">
+    #box{
+      width: 600px;
+      height: 600px;
+      margin: 100px; 
+      padding:30px;
+/*      padding-left: 30px; 
+*/
+      background-color: pink
+    }
+    #box>div{
+      float: left;
+    }
+    #box>div:nth-child(1){
+      width: 600px;
+      height: 200px;
+      background-color: blue
+    }
+    #box>div:nth-child(2){
+      width: 200px;
+      height: 200px;
+      background-color: green
+    }
+    #box>div:nth-child(3){
+      width: 200px;
+      height: 200px;
+      background-color: yellow
+    }
+    #box>div:nth-child(4){
+      width: 200px;
+      height: 200px;
+      background-color: grey
+    }
+    #box>div:nth-child(5){
+      width: 600px;
+      height: 200px;
+      background-color: blue
+    }
+    #block{
+      width: 1000px;
+      height: 40px;
+      background-color: blue;
+      margin: 10px auto
+    }
+    #hebing1{
+      width: 100px;
+      height: 100px;
+      margin: 100px;
+      background-color: #020
+    }
+    #hebing2{
+      width: 100px;
+      height: 100px;
+      margin-top: 100px;
+      margin-left: 100px;
+      background-color: #ccc
+    }
+
+    #fu{
+      width: 300px;
+      height: 300px;
+      background-color: #aaa;
+      border:1px solid red;   /*加入这个的话就可以去除连个相包容的div的中
+                                子div设置margin影响外层的div效果*/
+    }
+    #son{
+      width: 100px;
+      height: 100px;
+      background-color: #000;
+      margin-top:30px;  /* 单独加了margin的话就会导致父子div同
+                            时下移30px，解决这种情况的话可以在父div
+                            中加入border(边框)属性,如上*/
+
+    }
+
+/*
+    margin特点
+    1、块元素相邻外边距会合并（取最大的margin值）
+    2、行内元素实际上不占上下外边距。行内元素(行内块元素)的左右边距不合并
+    3、浮动元素的外边距也不合并
+    4、允许指定负的外边距值，不过使用时要小心*/
+  </style>
+</head>
+
+<body>
+  <div id = 'box'>
+    <div ></div>
+    <div ></div>
+    <div class='box1'></div>
+    <div ></div>
+    <div ></div>
+  </div>
+  <div id ='block'>
+    <!-- 块状元素居中 -->
+  </div>
+
+    <!-- 两个相邻容器的margin会合并(重叠) -->
+    <div id = 'hebing1'>
+      <!-- 外间距合并 -->
+    </div>
+    <div id = 'hebing2'>
+      <!-- 外间距合并 -->
+    </div>
+
+
+  <!-- 两个相包容容器的margin会合并(重叠) -->
+  <div id = 'fu'>
+      <div id = 'son'>
+
+      </div>
+  </div>
+
+</body>
+<script type="text/javascript">
+
+</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>display</title>
+  <style>
+    div,span{
+      /*块状元素（行内块元素）的话就有宽高属性
+      行内元素就没有
+      设置为行内块元素（不会独占一行）的话，所有设置的div就会排成一排，不会独占一行
+      */
+      width: 200px;
+      height: 200px
+    }
+    div{
+      background-color: red;
+/*    display: block;  块*/
+/*    display: inline;  行内*/
+/*    display: inline-block;  行内块*/
+/*    display: table-cell;   表格填充*/
+/*    display: flex;  ---流动布局*/
+/*    display: none;  ---消失之后不占位置*/
+/*    visibility: hidden; ---消失之后占位置 */
+/*    visibility: visible;  ---让消失的块显示*/
+/*    opacity: 1 ---设置透明度属性也可以做到*/
+   
+     }
+    span{
+      display: block;
+      background-color: blue
+    }
+  </style>
+</head>
+
+<body>
+  <!--div:块状元素：具有宽高属性，并且占据一行-->
+  <div>
+    这是块元素
+  </div>
+  <div>
+    这是块元素
+  </div>
+  <div>
+    这是块元素
+  </div>
+  <div>
+    这是块元素
+  </div>
+  <div>
+    这是块元素
+  </div>
+  <!--行内元素：没有宽高属性，不会独占一行-->
+  <span>
+    这行内元素是
+  </span>
+</body>
+
+
+<script type="text/javascript">
+
+
+  
+</script>
+</html>
