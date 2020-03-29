@@ -53,8 +53,18 @@ document.querySelectorAll('.box')//返回指定选择器的所有元素对象 �
     //表单是使用  input.value
     // btn.disable = true
 
+    //修改样式
+    //驼峰命名法 background-color  变成 backgroundColor
+    //js的样式，变成行内样式
+    div.style.backgroundColor = "red";
 
+    div.style.backgroundPosition = 'x y';
 
+    //焦点 获得焦点onfocus  失去焦点onblur
+        input.onfocus
+    //如果样式多 可以使用div.className = '****' ;
+    //className 会覆盖之前的class
+    //如果要保留来的类名 div.className = '原来的类 ****'
 
 
 //能够创建元素
