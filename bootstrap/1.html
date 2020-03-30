@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="bootstrap.js">
+  <link rel="stylesheet" href="bootstrap.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>1.html</title>
+  <style>
+  	.container-fluid  >div>div{
+  		/*width: 1000px!important;*/
+  		border:1px solid red;
+
+  	}
+	
+  </style>
+</head>
+
+<body>
+<!--bootstrap栅格
+	容器:
+	---- container-fluid
+		>> 流体
+		有空隙，带有左右padding值（15px）
+	---- container
+		有空隙，带有左右padding值（15px）
+		>>固定
+		>>1170px 
+		>>970px
+		>>750px
+		>>auto
+	概念
+	---- 分12列
+		>> row
+		>> col
+	---- 阈（yu）值
+		>> 1200>=  大屏       1170px  lg
+		>> 992>=   中屏		  970px   md
+		>> 768>=   小屏（pad） 750px   sm
+		>> 768<	   手机        auto	  xs
+
+	container 和 container 最好不要嵌套 
+	两个都有padding，防止布局混乱
+
+	col-lg-offset-4:向左偏移       这偏移如果位置不够她会换行偏移
+
+	col-lg-push-4:向后偏移（移动） 
+	col-lg-pull-4:向前偏移（移动）
+	这两个偏移不会换行，但是会挤出去
+
+	<div class="col-lg-6">
+		col-lg-6aaaaaa
+		<div class='col-lg-3'>
+		<div class='col-lg-3'>
+		<div class='col-lg-3'>
+		<div class='col-lg-3'>
+		里面的4个div12份大小是外面的div的大小
+	</div>
+
+
+-->
+
+
+	<div class="container-fluid">
+		<!-- <div class="row">
+			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-6">
+				aaaa
+			</div>
+			<div class="col-lg-11 col-md-11 col-sm-11 col-xs-6">
+				aaaa
+			</div>
+		</div>
+		<br>
+		<div class='row'>
+			<div class="col-lg-2 col-lg-push-7" >
+				aaaa1
+			</div>
+			<div class="col-lg-3 col-lg-push-7" >
+				aaaa2
+			</div>
+			<div class="col-lg-7 col-lg-pull-5">
+				aaaa3
+			</div>
+		</div> -->
+		<div class="row">
+			<div class="col-lg-6">
+				asdasdasd
+				sadasdasdas
+				asdasdasdas
+				sdasdasdas
+				sadasd
+				sadasdasd
+				asdasdas
+				asddasdasdas
+				asdasdasdasd
+				asdasdasd
+				asdasd
+				dasdasdasdasd				sadasdasdas
+				asdasdasdas
+				sdasdasdas
+				sadasd
+				sadasdasd
+				asdasdas
+				asddasdasdas
+				asdasdasdasd
+				asdasdasd
+				asdasd
+				dasdasdasdasd
+			</div>
+			<div class="col-lg-6">
+				asdasdasdasd
+				asdasdasdasd
+			</div>
+			<!-- 如果不想让它排到后面 
+				 用class='clearfix'清除
+			-->
+
+			<div class="col-lg-3">
+				asdasdasdasd
+				asdasdasdasd
+			</div>
+			<div class="col-lg-3">
+				asdasdasdasd
+				asdasdasdasd
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-lg-6">
+				asdasdasdasd
+				asdasdasdasd
+			</div>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript">
+</script>
+</html>

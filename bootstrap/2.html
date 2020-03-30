@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="bootstrap.js">
+  <link rel="stylesheet" href="bootstrap.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>2.html</title>
+  <style>
+  	.tips1{
+  		width: 30px;
+  		height: 300px;
+  		border:1px solid red;
+  		background-color: #8496a6;
+  		right: 0px;
+  	}
+  	.tips2{
+  		width: 30px;
+  		height: 100px;
+  		border:1px solid blue;
+  	}
+  	
+  	.tips3{
+  		height: 3000px;
+  		border:1px solid red
+  	}
+
+  </style>
+</head>
+<!--用 visible-lg-block 来控制显示 	
+                        还可以控制block inline
+	   hidden-lg-block 来控制隐藏 
+
+	   pull-right pull-left 浮动
+	   打印类
+	   ---- visible-print-*
+	   		hidden-print
+	   		<div class="visible-print-block">
+	   			aaa
+	   		</div>
+	   		打印的时候看得见
+	   		没打印的时候看不见
+	   		<div class="visible-print">
+	   			bbb
+	   		</div>
+	   		没打印的时候看De见
+	   		打印的时候看不见
+-->
+<body>
+<!--  	<div class="container">
+	 	<div class="col-lg-4 	 visible-md-block visible-lg-block aaa">
+	 		col-lg-4
+ 		</div>
+ 		<br>
+ 		<br><br>
+ 		<div class="col-lg-8 	hidden-sm hidden-xs aaa">
+	 		col-lg-4
+ 		</div>
+ 	</div> -->
+
+
+<!-- 	<div class="container-fluid">
+		<div class="row">	
+			<div class="tips1 pull-right visible-lg-block visible-md-block">
+			有padding可以给它外面套个div	 class="row"
+			</div>
+			<div class="tips2 pull-right hidden-md hidden-lg">
+			有padding可以给它外面套个div class="row"
+			</div>
+		</div>
+	</div> -->
+
+
+
+	<div class="container-fluid">
+		<div class="row">	
+			<div class="tips1 
+			affix
+			visible-lg-block visible-md-block">
+<!--有padding可以给它外面套个div class="row" -->
+			</div>
+			<div class="tips3 col-lg-9 ">
+				aaaaaaaaaaaaa
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+
+<script type="text/javascript">
+</script>
+</html>
