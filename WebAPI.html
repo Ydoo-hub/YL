@@ -66,6 +66,21 @@ document.querySelectorAll('.box')//返回指定选择器的所有元素对象 �
     //className 会覆盖之前的class
     //如果要保留来的类名 div.className = '原来的类 ****'
 
+    //获取属性
+    var div = document.getElementsByTagName('div')
+    console.log(div.id);  //这个不能获取自定义属性
+    console.log(div.getAttribute("id"))//这个可以获取自定义属性
+
+    //设置属性值
+    div.id = 'bbb';
+    div.className = 'aaa';
+
+    div.setAttribute('index',2);
+    div.setAttribute("class","aa");
+
+    div.removeAttribute('index');
+
+
 
 //能够创建元素
 
