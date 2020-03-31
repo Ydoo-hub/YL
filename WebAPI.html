@@ -80,16 +80,18 @@ document.querySelectorAll('.box')//返回指定选择器的所有元素对象 �
 
     div.removeAttribute('index');
 
-    //自定义属性  data-index = '1'    h5新特性 data-开头
-    div.dataset.index//这样就可以获取成功
+    //自定义属性  data-index = '1'    h5新特性 data-开头，
+    div.dataset.index//这样就可以获取成功，dataset只能获取data-开头的   ie11以上才支持的
     div.dataset[index]//这样也ok
     //dataset就是一个自定义属性的集合
 
+    //自定义属性  data-list-name = '1'
+    div.dataset.listName //使用驼峰命名法
+    div.dataset[listName]//这样也ok
+
 //能够创建元素
 
-
 //如何操作DOM节点
-
 
 
 </script>
