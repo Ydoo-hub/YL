@@ -24,7 +24,7 @@ function main() {
         return;
     }
     if(a[index] < n){
-        console.log("结束了");
+        console.log("end");
         resurt =  res;
         return;
     }
@@ -42,4 +42,4 @@ function main() {
 }
 main();
 
-console.log("结果---"+ resurt )
+console.log("结果:"+ resurt )
