@@ -55,6 +55,7 @@ function ajax(option) {
         * */
         //下面这句话要放在 open 和 send 中间
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
         xmlhttp.send(str);//发送请求
     }
 
