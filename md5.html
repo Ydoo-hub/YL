@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>html</title>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script src="md5.js" type="text/javascript" charset="utf-8"></script>
+</head>
+  <body>
+    <button id="btn1">输入密码</button>
+
+    <input type="password" id="pwd">
+  </body>
+
+
+<script type="text/javascript">
+
+$("#btn1").click(function(){
+  let data = 111;
+  let a = hex_md5(data);
+  alert(data+a);
+});
+
+
+
+</script>
+</html>
