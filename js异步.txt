@@ -1,0 +1,131 @@
+一、实现异步的方式：
+1、setTimeout：这个是最简单的
+
+setTimeout( function() {
+    console.log(1);
+});
+console.log(2);
+2、setImmediate ：IE10添加的新功能，专门用于解放ui线程。IE10以下及其他浏览器不支持
+
+setImmediate(function(){
+    console.log(1);
+});
+console.log(2);
+3、requestAnimationFrame ：HTML5/CSS3时代新产物，专门用于动画。低级浏览器不支持
+
+
+var asynByAniFrame = (function(){
+    var _window = window,
+    frame = _window.requestAnimationFrame
+            || _window.webkitRequestAnimationFrame
+            || _window.mozRequestAnimationFrame
+            || _window.oRequestAnimationFrame
+            || _window.msRequestAnimationFrame;
+    return function( callback ) { frame( callback ) };
+})();
+
+asynByAniFrame(function(){
+    console.log(1);
+})
+console.log(2);
+
+4、监听new Image加载状态：通过加载一个data:image数据格式的图片，并监听器加载状态实现异步。
+
+　　尽管部分浏览器不支持data:image图片数据格式，但仍然可以触发其onerror状态实现异步，但IE8及以下对data:image数据格式的图片，onerror为同步执行
+
+
+function asynByImg( callback ) {
+    var img = new Image();
+    img.onload = img.onerror = img.onreadystatechange = function() {
+        img = img.onload = img.onerror = img.onreadystatechange = null;
+        callback();
+    }
+    img.src = "data:image/png,";
+}
+asynByImg(function(){
+    console.log(1);
+});
+console.log(2);
+
+5、监听script加载状态
+
+　　原理同new Image是一样的，生成一个data:text/javascript的script，并监听其加载状态实现异步。
+
+　　尽管部分浏览器不支持data:text/javascript格式数据的script，但仍然可以触发其onerror、onreadystatechange事件实现异步。
+
+
+var asynByScript = (function() {
+    var _document = document,
+        _body = _document.body,
+        _src = "data:text/javascript,",
+        //异步队列
+        queue = [];
+    return function( callback ) {
+            var script = _document.createElement("script");
+            script.src  = _src;
+            //添加到队列
+            queue[ queue.length ] = callback;
+            script.onload = script.onerror = script.onreadystatechange = function () {
+                script.onload = script.onerror = script.onreadystatechange = null;
+                _body.removeChild( script );
+                script = null;
+                //执行并删除队列中的第一个
+                queue.shift()();
+            };
+            _body.appendChild( script );
+        }
+
+    })();
+
+asynByScript( function() {
+    console.log(1);
+} );
+console.log(2);
+
+6、Message：html5新技能，通过监听window.onmessage事件实现，然后postMessage发送消息，触发onmessage事件实现异步
+
+复制代码
+var asynByMessage = (function() {
+        //异步队列
+        var queue = [];
+        window.addEventListener('message', function (e) {
+            //只响应asynByMessage的召唤
+            if ( e.data === 'asynByMessage' ) {
+                e.stopPropagation();
+                if ( queue.length ) {
+                    //执行并删除队列中的第一个
+                    queue.shift()();
+                }
+            }
+        }, true);
+        return function( callback ) {
+            //添加到队列
+            queue[ queue.length ] = callback;
+            window.postMessage('asynByMessage', '*');
+        };
+    })();
+
+asynByMessage(function() {
+    console.log(1);
+});
+console.log(2);
+
+7、Promise： ES6的新技能，具有异步性质
+
+
+var asynByPromise = (function() {
+        var promise = Promise.resolve({
+                then : function( callback ) {
+                    callback();
+                }
+            });
+        return function( callback ) {
+                    promise.then(function(){
+                        callback();
+                    })
+                };
+    })();
+asynByPromise(function() {
+    console.log(1);
+});
+console.log(2);

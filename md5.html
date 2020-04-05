@@ -15,13 +15,30 @@
 
 <script type="text/javascript">
 
-$("#btn1").click(function(){
-  let data = 111;
-  let a = hex_md5(data);
-  alert(data+a);
-});
+// $("#btn1").click(function(){
+//   let data = 111;
+//   let a = hex_md5(data);
+//   alert(data+a);
+// });
+
+// (function MD5(pwd){
+//   let a = "123456";
+//   alert(a);
+//   a = hex_md5(a);
+//   a = hex_md5(a);
+//   alert(a)
+// }());
 
 
+(function MD5(pwd){
+  let a = "123456";
+  alert(a);
+  a = b64_md5(a);
+  a = hex_md5(a);
+
+  alert(a)
+}());
 
 </script>
 </html>
+//https://www.cnblogs.com/chyingp/p/nodejs-learning-crypto-md5.html
