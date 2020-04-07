@@ -152,3 +152,10 @@ let cad = /^[0-9a-zA-Z-_]{6,12}$/;
 console.log(cad.test("Ydoo-009"));
 let cd = /^[0-9a-zA-Z-_]{6,12}$/;          //{6,12} 之间不能有空格 有空格会报错
 console.log(cd.test("Ydoo-009"));
+
+
+//////
+
+var aasa;
+console.log(aasa);
+console.log(asdsaaaaa);
