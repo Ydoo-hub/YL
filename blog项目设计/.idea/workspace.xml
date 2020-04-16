@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="87e0eb3d-854e-42b6-b275-f9c7d5e364ca" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1U30gZbt5eloUXeRFxKexPb7cNN" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\YD\Desktop\wqwe" />
+      <recent name="C:\Users\YD\Desktop\wqwe\fonts" />
+      <recent name="C:\Users\YD\Desktop\wqwe\js" />
+      <recent name="C:\Users\YD\Desktop\wqwe\css" />
+      <recent name="D:\wqwe" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\YD\Desktop\wqwe" />
+      <recent name="D:\wqwe" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Blog/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="87e0eb3d-854e-42b6-b275-f9c7d5e364ca" name="Default Changelist" comment="" />
+      <created>1574570082677</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574570082677</updated>
+      <workItem from="1574570085744" duration="11167000" />
+      <workItem from="1574586200927" duration="6643000" />
+      <workItem from="1574692761028" duration="2600000" />
+      <workItem from="1574738627019" duration="7714000" />
+      <workItem from="1574771483379" duration="629000" />
+      <workItem from="1574930076425" duration="1480000" />
+      <workItem from="1575030305319" duration="93000" />
+      <workItem from="1575030568395" duration="43000" />
+      <workItem from="1575085523069" duration="710000" />
+      <workItem from="1575086908678" duration="1495000" />
+      <workItem from="1575088734444" duration="59000" />
+      <workItem from="1575115649751" duration="15000" />
+      <workItem from="1575181826778" duration="54000" />
+      <workItem from="1577631531820" duration="1862000" />
+      <workItem from="1577848242378" duration="7648000" />
+      <workItem from="1577858865640" duration="43000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
