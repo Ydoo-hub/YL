@@ -19,13 +19,17 @@
       padding: 10px;
       /*float: left;*/
       /*position: absolute;*/
-/*      float 和 position 都会影响到span行内元素，默认成inline-block，span是非替换元素，所以不能设置宽高。你float之后，让span成块级元素，所以可以设置宽高。像img,input,textarea,select这些虽然是行内，但是是替换元素，如果是没有设置宽高，那么就是默认宽高，宽高是可以设定的。*/
+/*      float 和 position 都会影响到span行内元素，默认成inline-block，span是非替换元素，
+所以不能设置宽高。你float之后，让span成块级元素，所以可以设置宽高。像img,input,textarea,select这些虽然是行内，
+但是是替换元素，如果是没有设置宽高，那么就是默认宽高，宽高是可以设定的。*/
     }
-/*span和div在一起的时候要注意，行高line-height问题，在设置了padding的情况下，div的padding会伸到行高的位置，因此似div的padding和span 交叉在一起，看起来像是margin合并的样子，其实不是*/
+/*span和div在一起的时候要注意，行高line-height问题，在设置了padding的情况下，div的padding会伸到行高的位置，
+因此似div的padding和span 交叉在一起，看起来像是margin合并的样子，其实不是*/
 
 
 /*
-padding 的宽度要记录在盒子模型的宽高之内，于是相同的border也记录在盒子模型的宽高之内，所以在书写宽高的时候注意减内边距和边框的距离（标准盒子模型）
+padding 的宽度要记录在盒子模型的宽高之内，于是相同的border也记录在盒子模型的宽高之内，
+所以在书写宽高的时候注意减内边距和边框的距离（标准盒子模型）
 */
     .box1{
       width: 100px;
@@ -60,6 +64,6 @@ padding 的宽度要记录在盒子模型的宽高之内，于是相同的border
 <script type="text/javascript">
 
 
-  
+
 </script>
 </html>

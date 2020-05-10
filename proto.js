@@ -48,3 +48,9 @@ console.log(Object === o3.__proto__.constructor);
 
 
 /*new*/
+console.log('--------------------------------');
+console.log(1 instanceof Number);
+console.log(true instanceof Boolean);
+console.log('str' instanceof String);
+console.log([] instanceof Array)
+console.log([] instanceof Object)
