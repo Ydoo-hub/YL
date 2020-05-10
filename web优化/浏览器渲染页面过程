@@ -4,3 +4,4 @@
 3.将DOM和CSSOM整合形成RenderTree（渲染树）
 4.根据RenderTree开始渲染和展示
 5.遇到<script>时，会执行并阻塞渲染
+
