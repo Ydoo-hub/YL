@@ -4,8 +4,8 @@ var A;
 A = 'hello tsc'; //这个时候定义就没问题 
 var input = document.querySelectorAll('input');
 var button = document.querySelector('button');
-button.onclick = function () {
-    console.log("点击了");
+button.click = function () {
+    console.log("点击了")
     var result = Number(input[0].value) + Number(input[1].value);
     alert(result);
 };

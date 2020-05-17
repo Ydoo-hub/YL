@@ -1,0 +1,3 @@
+2.数据类型
+基本类型：布尔 number string Null undefined
+特殊类型：Array Tuple元组 Enum枚举 Any任意类型 Void无类型 Never永远没有类型
