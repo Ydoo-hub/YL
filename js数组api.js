@@ -79,4 +79,20 @@ var arrRemoved3 = arr.splice(1,1,2,4);
 console.log(arr); // [5, 2, 4, 4, 6, 9, 11]
 console.log(arrRemoved3); //[7]
 
+//5.concat()
+//concat() ：将参数添加到原数组中。这个方法会先创建当前数组一个副本，然后将接收到的参数添加到这个副本的末尾，
+//最后返回新构建的数组。在没有给 concat()方法传递参数的情况下，它只是复制当前数组并返回副本。
 
+var arr = [1,3,5,7];
+var arrCopy = arr.concat(9,[11,13]);
+console.log(arrCopy); //[1, 3, 5, 7, 9, 11, 13]
+console.log(arr); // [1, 3, 5, 7](原数组未被修改)
+
+//从上面测试结果可以发现：传入的不是数组，则直接把参数添加到数组后面，如果传入的是数组，则将数组中的各个项添加到数组中。
+//但是如果传入的是一个二维数组呢？
+
+var arrCopy2 = arr.concat([9,[11,13]]);
+console.log(arrCopy2); //[1, 3, 5, 7, 9, Array[2]]
+console.log(arrCopy2[5]); //[11, 13]
+//上述代码中，arrCopy2数组的第五项是一个包含两项的数组，也就是说concat方法只能将传入数组中的每一项添加到数组中，
+//如果传入数组中有些项是数组，那么也会把这一数组项当作一项添加到arrCopy2中。
