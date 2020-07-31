@@ -96,3 +96,49 @@ console.log(arrCopy2); //[1, 3, 5, 7, 9, Array[2]]
 console.log(arrCopy2[5]); //[11, 13]
 //上述代码中，arrCopy2数组的第五项是一个包含两项的数组，也就是说concat方法只能将传入数组中的每一项添加到数组中，
 //如果传入数组中有些项是数组，那么也会把这一数组项当作一项添加到arrCopy2中。
+
+
+//6.reverse()
+//push(): 可以接收任意数量的参数，把它们逐个添加到数组末尾，并返回修改后数组的长度。 
+//pop()：数组末尾移除最后一项，减少数组的 length 值，然后返回移除的项。
+var arr = ["Lily","lucy","Tom"];
+var count = arr.push("Jack","Sean");
+console.log(count); // 5
+console.log(arr); // ["Lily", "lucy", "Tom", "Jack", "Sean"]
+var item = arr.pop();
+console.log(item); // Sean
+console.log(arr); // ["Lily", "lucy", "Tom", "Jack"]
+
+//8.shift()+unshift()
+//shift()：删除原数组第一项，并返回删除元素的值；如果数组为空则返回undefined 。 
+//unshift:将参数添加到原数组开头，并返回数组的长度 。
+//这组方法和上面的push()和pop()方法正好对应，一个是操作数组的开头，一个是操作数组的结尾。
+var arr = ["Lily","lucy","Tom"];
+var count = arr.unshift("Jack","Sean");
+console.log(count); // 5
+console.log(arr); //["Jack", "Sean", "Lily", "lucy", "Tom"]
+var item = arr.shift();
+console.log(item); // Jack
+console.log(arr); // ["Sean", "Lily", "lucy", "Tom"]
+
+//9.forEach()
+//forEach()：对数组进行遍历循环，对数组中的每一项运行给定函数。这个方法没有返回值。
+//参数都是function类型，默认有传参，参数分别为：遍历的数组内容；对应的数组索引，数组本身。
+var arr = [1, 2, 3, 4, 5];
+    arr.forEach(function(item, index, array){
+    console.log(item + '-' + index + '-' + (array === arr));
+});
+// 输出为：
+//1-0-true
+//2-1-true
+//3-2-true
+//4-3-true
+//5-4-true
+
+//10.map()
+//map()：指“映射”，对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。
+//下面代码利用map方法实现数组中每个数求平方。
+var arr = [1, 2, 3, 4, 5];
+var arr2 = arr.map(item => item*item);
+console.log(arr2); //[1, 4, 9, 16, 25]
+
