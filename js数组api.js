@@ -150,3 +150,52 @@ var arr2 = arr.some(x => x<3);
 console.log(arr2); //true
 var arr3 = arr.some(x => x<1); 
 console.log(arr3); // false
+
+// 12.every()
+// every()：判断数组中每一项都是否满足条件，只有所有项都满足条件，才会返回true。
+var arr = [1, 2, 3, 4, 5];
+var arr2 = arr.every(x => x<10); 
+console.log(arr2); //true
+var arr3 = arr.every(x => x<3); 
+console.log(arr3); // false
+
+// 13.filter()
+// filter()：“过滤”功能，数组中的每一项运行给定函数，返回满足过滤条件组成的数组。
+
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var arr2 = arr.filter((item, index) => {
+　　return index % 3 === 0 || item >= 8;
+}); 
+console.log(arr2); //[1, 4, 7, 8, 9, 10]
+
+//14.reduce()+reduceRight()
+// 这两个方法都会实现迭代数组的所有项，然后构建一个最终返回的值。reduce()方法从数组的第一项开始，逐个遍历到最后。
+// 而 reduceRight()则从数组的最后一项开始，向前遍历到第一项。
+
+// 这两个方法都接收两个参数：一个在每一项上调用的函数和（可选的）作为归并基础的初始值。
+
+// 传给 reduce()和 reduceRight()的函数接收 4 个参数：前一个值、当前值、项的索引和数组对象。
+// 这个函数返回的任何值都会作为第一个参数自动传给下一项。第一次迭代发生在数组的第二项上，因此第一个参数是数组的第一项，
+// 第二个参数就是数组的第二项。
+
+// 下面代码用reduce()实现数组求和，数组一开始加了一个初始值10。
+
+var values = [1,2,3,4,5];
+var sum = values.reduceRight((prev, cur, index, array) => {
+    return prev + cur;
+},10);
+console.log(sum); //25
+
+// 15.indexOf()+lastIndexOf()
+
+// indexOf()：接收两个参数：要查找的项和（可选的）表示查找起点位置的索引。其中， 从数组的开头（位置 0）开始向后查找。 
+// lastIndexOf：接收两个参数：要查找的项和（可选的）表示查找起点位置的索引。其中， 从数组的末尾开始向前查找。
+
+// 这两个方法都返回要查找的项在数组中的位置，或者在没找到的情况下返回1。在比较第一个参数与数组中的每一项时，会使用全等操作符。
+
+var arr = [1,3,5,7,7,5,3,1];
+console.log(arr.indexOf(5)); //2
+console.log(arr.lastIndexOf(5)); //5
+console.log(arr.indexOf(5,2)); //2
+console.log(arr.lastIndexOf(5,4)); //2
+console.log(arr.indexOf("5")); //-1
