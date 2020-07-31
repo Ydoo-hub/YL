@@ -142,3 +142,11 @@ var arr = [1, 2, 3, 4, 5];
 var arr2 = arr.map(item => item*item);
 console.log(arr2); //[1, 4, 9, 16, 25]
 
+// 11.some()
+// some()：判断数组中是否存在满足条件的项，只要有一项满足条件，就会返回true。
+
+var arr = [1, 2, 3, 4, 5];
+var arr2 = arr.some(x => x<3); 
+console.log(arr2); //true
+var arr3 = arr.some(x => x<1); 
+console.log(arr3); // false
