@@ -199,3 +199,60 @@ console.log(arr.lastIndexOf(5)); //5
 console.log(arr.indexOf(5,2)); //2
 console.log(arr.lastIndexOf(5,4)); //2
 console.log(arr.indexOf("5")); //-1
+
+
+// 16.Array.form()
+
+// 这个东西就是把一些集合，或者长的像数组的伪数组转换成真的数组，比如arguments，js选择器找到dom集合,
+// 还有对象模拟的数组
+// var obj = {
+// 　　'0' : 1,
+// 　　length : 1
+// }
+Array.from(obj / arguments / 伪数组) //返回的是一个数组
+[].slice.call(arguments, 0) //这种方式根from方法是一样的效果
+
+//Array.from还有第二个参数，是一个回掉函数，功能类似map
+Array.from( [1, 2, 3], item => item * 2 )
+
+// 17.Array.of()
+
+// 把参数合并成一个数组返回，如果参数为空，则返回一个空数组
+
+Array.of(1,2,3,4,5);//[1,2,3,4,5]
+// 18.copyWithin()
+
+// 这个不常用，但是很有意思。
+
+// 参数有3个，1：被替换的起始位置，2：选取替换值的起始位置，3：选取替换值的结束位置
+var arr = [1, 'c', 'd', 'a', 'b'];  //假如我想把a，b替换到1的位置
+arr.copyWithin(0, 3, 5)   // ["a", "b", "d", "a", "b"]
+
+// 19.find()+findIndex()
+// 返回数组中第一个符合条件的元素，findIndex返回索引
+
+[1, 2, 3, 4, 5].find((item) => {return item > 3}) //4
+
+// 20.fill()
+// 功能一：字面意思填满，实际功能就是把数组中的每一个元素替换成指定值
+// 功能二：指定范围替换，第一个参数替换值，第二个是起始下标，第三个结束下标（不包含）
+// 功能三：扩展对象
+
+var arr = [1, 2, 3, 4]
+arr.fill(5); //[5,5,5,5]
+arr.fill(6,1,3); //[1,6,6,5]
+[].fill.call({length:3},4); //{0:4,1:4,2:4}
+
+// 21.entries/keys/values
+// 都取/取键/取值
+
+var arr=['a', 'b', 'c']
+for(let key of arr.keys()){console.log(key)} //0,1,2                    
+for(let value of arr.values()){console.log(value)} //a,b,c               
+for(let [key, value] of arr.entries()){console.log([key,value])} //[0,'a'],[1,'b'],[2,'c']
+
+// 22.includes
+// 判断数组是否包含某项，返回true/false
+
+[1, 2, 3, 4, 5].includes(4)    //true
+[1, 2, 3, 4, NaN].includes(NaN)    //true
