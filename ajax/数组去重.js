@@ -101,9 +101,62 @@ function unique7(arr){
    console.log('------------方法七---------------');
    console.log(unique7([1,1,2,3,5,3,1,5,6,7,4]));
 
+// 8.思路八：利用数组原型对象上的 splice 方法。
 
+function unique8(arr){
+    var i,
+     j,
+     len = arr.length; 
+    for(i = 0; i < len; i++){
+     for(j = i + 1; j < len; j++){
+      if(arr[i] == arr[j]){
+       arr.splice(j,1);
+       len--;
+       j--;
+      }
+     }
+    }
+    return arr;
+   }
+   console.log('------------方法八---------------');
+   console.log(unique8([1,1,2,3,5,3,1,5,6,7,4]));
 
+// 9.思路九：利用数组原型对象上的 lastIndexOf 方法。
 
+function unique9(arr){
+    var res = []; 
+    for(var i=0; i<arr.length; i++){
+     res.lastIndexOf(arr[i]) !== -1 ? '' : res.push(arr[i]);
+    }
+    return res;
+   }
+   console.log('------------方法九---------------');
+   console.log(unique9([1,1,2,3,5,3,1,5,6,7,4]));
 
+// 10.思路十：利用 ES6的set 方法。
+function unique10(arr){
+    //Set数据结构，它类似于数组，其成员的值都是唯一的
+    return Array.from(new Set(arr)); // 利用Array.from将Set结构转换成数组
+   }
+   console.log('------------方法十---------------');
+   console.log(unique10([1,1,2,3,5,3,1,5,6,7,4]));
 
+//  当把数组的长度变得很大的时候，测试了一下不同方法的执行时间长短，
+// 会发现方法三、四、五、六、七相对来说会更有优势，而方法八的执行速度似乎一直垫底。
+
+var time3 = new Date().getTime();
+function unique3(arr){
+ var res = [];
+ var obj = {};
+ for(var i=0; i<arr.length; i++){
+  if( !obj[arr[i]] ){
+   obj[arr[i]] = 1;
+   res.push(arr[i]);
+  }
+ } 
+ return res;
+}
+console.log('------------方法三---------------');
+console.log( unique3(arr) );
+console.log('3所花时间： ' + (new Date().getTime() - time3));
 
