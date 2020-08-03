@@ -69,3 +69,15 @@ charCodeAt/codePointAt
 // 字符转Unicode/编码点
 
 
+normalize
+
+// 格式化字符串为指定的Unicode编码点格式
+
+// 特殊
+valueOf
+
+// 返回一个String对象的原始值
+
+string[Symbol.iterator]
+
+// 返回字符串遍历字符的迭代器对象,所以可以配合let...of做遍历
