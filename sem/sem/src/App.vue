@@ -11,7 +11,7 @@
     <Advantage></Advantage>
     <div id="contact">
       <div  class="qqbox">
-        <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=1207092556&site=qq&menu=yes"><img src='@/assets/qq_icon.png'/></a>
+        <a target="_blank"><img src='@/assets/qq_icon.png'/></a>
       </div>
       <Poptip id='poptipbox1' placement="right" width="340">
         <a @click="opencode()"><img src='@/assets/Wechat_icon.png'/></a>
@@ -23,10 +23,10 @@
             <img src='@/assets/code2.png' />
           </div>
           <div class='kefucontent'>
-            <p class='kefucontent'>微信1：<a v-clipboard="adspowerkefu" @click="copyOk" style="text-decoration: underline; color:#283c64">adspowerkefu</a></p>
+            <p class='kefucontent'>微信1：<a v-clipboard="" @click="copyOk" style="text-decoration: underline; color:#283c64">adspowerkefu</a></p>
           </div>
           <div class='kefucontent'>
-            <p class='kefucontent'>微信2：<a v-clipboard="adspowerkefu1" @click="copyOk" style="text-decoration: underline; color:#283c64">adspowerkefu1</a></p>
+            <p class='kefucontent'>微信2：<a v-clipboard="" @click="copyOk" style="text-decoration: underline; color:#283c64">adspowerkefu1</a></p>
           </div>
         </div>
       </Poptip>
@@ -40,10 +40,10 @@
             <img class="codewidth" src='@/assets/code2.png' />
           </div>
           <div class='kefucontent'>
-            <p class='kefucontent'><a v-clipboard="adspowerkefu" @click="copyOk" style="text-decoration: underline; color:#283c64">adspowerkefu</a></p>
+            <p class='kefucontent'><a v-clipboard="adspowerkefu" @click="copyOk" style="text-decoration: underline; color:#283c64">88888888</a></p>
           </div>
           <div class='kefucontent'>
-            <p class='kefucontent'><a v-clipboard="adspowerkefu1" @click="copyOk" style="text-decoration: underline; color:#283c64">adspowerkefu1</a></p>
+            <p class='kefucontent'><a v-clipboard="adspowerkefu1" @click="copyOk" style="text-decoration: underline; color:#283c64">88888888</a></p>
           </div>
         </div>
       </Poptip>
@@ -77,8 +77,8 @@ export default {
   data() {
          return {
            codeShow:false,
-           adspowerkefu: 'adspowerkefu',
-           adspowerkefu1: 'adspowerkefu1'
+           adspowerkefu: '',
+           adspowerkefu1: ''
          }
   },
   methods:{
