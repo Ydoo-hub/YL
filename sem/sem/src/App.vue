@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
     <Nav></Nav>
     <Register></Register>
     <Core></Core>
@@ -56,7 +52,6 @@ import Register from '@/views/Register.vue'
 import Core from '@/views/Core.vue'
 import Advantage from '@/views/Advantage.vue'
 import What from '@/views/What.vue'
-// import Toactivate from '@/views/Toactivate.vue'
 
 import '@/css/index.scss'
 import '@/css/media.scss'
